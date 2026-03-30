@@ -1,0 +1,18 @@
+{
+  "author": "bulbsum",
+  "license": "ISC",
+  "scripts": {
+    "lint": "biome check . --write",
+    "format": "biome format --write .",
+    "lint:check": "biome check .",
+    "format:check": "biome format .",
+    "types": "npx supabase gen types typescript --project-id jjdwllvgkcudaqimizuh --schema public > ./packages/core/src/infrastructure/supabase/supabase.types.ts",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter frontend dev"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.9",
+    "@snowdrive/biome-config": "^1.1.0",
+    "@types/node": "^25.5.0"
+  }
+}
