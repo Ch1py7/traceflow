@@ -1,3 +1,8 @@
+import { RouterProvider } from 'react-router'
+import { router } from './routes'
+import { useTheme } from './hooks/useTheme'
+
 export const App = () => {
-	return <h1 className="text-red-400">holaaa</h1>
+	useTheme()
+	return <RouterProvider router={router} />
 }

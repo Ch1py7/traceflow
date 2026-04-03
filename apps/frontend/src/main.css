@@ -3,8 +3,52 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0;
 	outline: none;
 	list-style: none;
 	text-decoration: none;
+}
+
+.theme-light {
+	--theme-text: hsl(221, 16%, 20%);
+	--theme-text-muted: hsl(233, 4%, 58%);
+	--theme-card-color: hsl(225, 21%, 11%);
+}
+
+.theme-dark {
+	--theme-text: hsl(245, 100%, 93%);
+	--theme-text-muted: hsl(226, 6%, 43%);
+	--theme-text-secondary: hsl(226, 9%, 56%);
+	--theme-card-color: hsl(225, 21%, 11%);
+}
+
+@layer base {
+	* {
+		border: var(--theme-border);
+		transition: background-color 0.2s ease;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	p,
+	input,
+	label,
+	button,
+	svg,
+	span {
+		color: var(--theme-text);
+	}
+}
+
+@layer utilities {
+	.text-muted {
+		color: var(--theme-text-muted);
+	}
+	.text-secondary {
+		color: var(--theme-text-secondary);
+	}
+	.bg-card {
+		background-color: var(--theme-card-color);
+	}
 }
